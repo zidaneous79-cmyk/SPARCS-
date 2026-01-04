@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPARCS - Spot It App</title>
+    <style>
+        body { font-family: Arial; text-align: center; background: #e0f7fa; padding: 50px; }
+        .btn { background: #00796b; color: white; padding: 20px 40px; border: none; border-radius: 50px; font-size: 20px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .btn:active { background: #004d40; }
+        #status { margin-top: 30px; color: #004d40; font-weight: bold; display: none; }
+    </style>
+</head>
+<body>
+    <h1>🌊 SPARCS Spot It</h1>
+    <p>See trash? Help the robot find it!</p>
+    <button class="btn" onclick="sendData()">📍 REPORT TRASH HERE</button>
+    <div id="status">Sending GPS to SPARCS...<br>✅ Task Dispatched!</div>
+
+    <script>
+        function sendData() {
+            document.getElementById('status').style.display = 'block';
+            // In a real app, this is where you'd send data to your ESP32
+            alert("Location Shared: 12.9716° N, 77.5946° E");
+        }
+    </script>
+</body>
+</html>
